@@ -11,7 +11,7 @@ const navigation = [
 ];
 
 declare global {
-  interface Window {
+  interface window {
     location: Location;
   }
 }
@@ -21,7 +21,10 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
-  const current = window.location.pathname;
+  let current = "/";
+  if (typeof window !== "undefined") {
+    current = window.location.pathname;
+  }
   const title = navigation.find((item) => item.href === current);
   return (
     <>
