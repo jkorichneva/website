@@ -10,6 +10,12 @@ const navigation = [
   { name: "Highlights", href: "/highlights", current: false },
 ];
 
+declare global {
+  interface Window {
+    location: Location;
+  }
+}
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
