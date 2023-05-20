@@ -4,9 +4,9 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "About me", href: "/", current: true },
-  { name: "Articles/Contributions", href: "/articles", current: false },
-  { name: "Highlights", href: "/highlights", current: false },
+  { name: "About me", href: "/website/", current: true },
+  { name: "Articles/Contributions", href: "/website/articles", current: false },
+  { name: "Highlights", href: "/website/highlights", current: false },
 ];
 
 declare global {
