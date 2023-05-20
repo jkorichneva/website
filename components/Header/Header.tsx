@@ -4,9 +4,8 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "About", href: "/", current: true },
-  { name: "Articles", href: "/articles", current: false },
-  { name: "Achievements", href: "/achievements", current: false },
+  { name: "About me", href: "/", current: true },
+  { name: "Articles/Contributions", href: "/articles", current: false },
   { name: "Highlights", href: "/highlights", current: false },
 ];
 
