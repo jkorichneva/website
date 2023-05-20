@@ -14,10 +14,10 @@ export default function Home() {
         <p>
           <b>Hey!</b> My name is Jana. I am a Senior Frontend developer based in
           Tbilisi with more than six years of experience. I specialize in React
-          and its' ecosystem, but also have experience in backend and devops. I
-          love automating manual operations and enhancing Dev experience. My
-          great inspiration is to shape thoughts into articles, code, and also
-          to speak publicly.
+          ecosystem, but also have experience in backend and devops. I love
+          automating manual operations and enhancing Dev experience. My great
+          inspiration is to shape thoughts into articles, code, and also to
+          speak publicly.
         </p>
 
         <h2 className="font-bold py-2">Tech stack:</h2>

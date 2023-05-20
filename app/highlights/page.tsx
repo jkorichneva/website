@@ -2,6 +2,7 @@ import { BeakerIcon } from "@heroicons/react/24/outline";
 
 const talks: Talk[] = [
   {
+    id: 1,
     year: 2022,
     description:
       "Digital accessibility talk in 5 parts, (ru), internal knowledge sharing",
@@ -9,6 +10,7 @@ const talks: Talk[] = [
       "https://drive.google.com/drive/folders/1vtDKcd-L2vWTuNVot7IH7BYRZlTpoWIe?usp=sharing",
   },
   {
+    id: 2,
     year: 2021,
     description: "BF Cache, (en), internal knowledge sharing",
     slides:
@@ -16,6 +18,7 @@ const talks: Talk[] = [
   },
 ];
 type Talk = {
+  id: number;
   year: number;
   description: string;
   slides?: string;
@@ -28,7 +31,7 @@ export default function Page() {
       {talks
         .sort((a, b) => (a.year > b.year ? -1 : 0))
         .map((talk) => (
-          <li className="py-2 flex flex-row">
+          <li key={talk.id} className="py-2 flex flex-row">
             <b>{talk.year}</b>
             <div className="ml-3">
               - {talk.description}
