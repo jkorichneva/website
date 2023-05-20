@@ -10,7 +10,7 @@ export default function Home() {
         height={500}
         alt="Blohey from Ikea sitting before the laptop with a cup of tea"
       />
-      <div className="ml-4">
+      <div className="sm:ml-4">
         <p>
           <b>Hey!</b> My name is Jana. I am a Senior Frontend developer based in
           Tbilisi with more than six years of experience. I specialize in React
