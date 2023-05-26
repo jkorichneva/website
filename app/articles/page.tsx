@@ -26,6 +26,22 @@ const articles = [
     language: "ru",
     link: "https://ru.react.dev/reference/react/StrictMode",
   },
+ {
+    id: 5,
+    year: 2023,
+    type: "Article",
+    description: "How I re-wrote all my composite actions to workflows and why",
+    language: "ru",
+    link: "https://dev.to/jkorichneva/how-i-re-wrote-all-my-composite-actions-to-workflows-and-why-14a5",
+  },
+    {
+    id: 6,
+    year: 2023,
+    type: "Article",
+    description: "Is your PR really ready for review?",
+    language: "ru",
+    link: "https://dev.to/jkorichneva/is-your-pr-really-ready-for-review-16c2",
+  },
 ];
 export default function Page() {
   return (
