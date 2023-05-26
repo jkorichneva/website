@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -15,15 +15,13 @@ declare global {
   }
 }
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Example() {
-  let current = "/";
-  if (typeof window !== "undefined") {
-    current = window.location.pathname;
-  }
+  const [current, setCurrent] = useState("/");
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrent(window.location.pathname);
+    }
+  }, []);
   return (
     <>
       <Disclosure as="nav" className="bg-brown">
@@ -49,12 +47,13 @@ export default function Example() {
                         <a
                           key={item.name}
                           href={item.href}
-                          className={classNames(
+                          className={`${
                             item.href === current
                               ? "bg-black text-white"
-                              : "text-white hover:bg-black hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                          )}
+                              : "text-white hover:bg-black hover:text-white"
+                          }
+                            rounded-md px-3 py-2 text-sm font-medium
+                         `}
                           aria-current={
                             item.href === current ? "page" : undefined
                           }
@@ -78,12 +77,13 @@ export default function Example() {
                     key={item.name}
                     as="a"
                     href={item.href}
-                    className={classNames(
+                    className={`${
                       item.href === current
                         ? "bg-black text-white"
-                        : "text-white hover:bg-black hover:text-white",
-                      "block rounded-md px-3 py-2 text-base font-medium"
-                    )}
+                        : "text-white hover:bg-black hover:text-white"
+                    }
+                           block rounded-md px-3 py-2 text-base font-medium
+                         `}
                     aria-current={item.href === current ? "page" : undefined}
                   >
                     {item.name}

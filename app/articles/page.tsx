@@ -1,4 +1,5 @@
 import { BeakerIcon } from "@heroicons/react/24/outline";
+import SectionHeader from "@/components/SectionHeader/SectionHeader";
 
 const articles = [
   {
@@ -26,7 +27,7 @@ const articles = [
     language: "ru",
     link: "https://ru.react.dev/reference/react/StrictMode",
   },
- {
+  {
     id: 5,
     year: 2023,
     type: "Article",
@@ -34,7 +35,7 @@ const articles = [
     language: "ru",
     link: "https://dev.to/jkorichneva/how-i-re-wrote-all-my-composite-actions-to-workflows-and-why-14a5",
   },
-    {
+  {
     id: 6,
     year: 2023,
     type: "Article",
@@ -45,24 +46,27 @@ const articles = [
 ];
 export default function Page() {
   return (
-    <ul className="min-w-full flex flex-col flex-grow">
-      {articles
-        .sort((a, b) => (a.year > b.year ? -1 : 0))
-        .map((article) => (
-          <li className="py-2 flex flex-row" key={article.id}>
-            <b>{article.year},</b>
-            <div className="ml-3">
-              {article.type} - {article.description}, {article.language}
-              <div>
-                {article.link && (
-                  <a className="underline" href={article.link}>
-                    Link
-                  </a>
-                )}
+    <>
+      <SectionHeader title="Articles/Contributions" />
+      <ul className="min-w-full flex flex-col flex-grow">
+        {articles
+          .sort((a, b) => (a.year > b.year ? -1 : 0))
+          .map((article) => (
+            <li className="py-2 flex flex-row" key={article.id}>
+              <b>{article.year},</b>
+              <div className="ml-3">
+                {article.type} - {article.description}, {article.language}
+                <div>
+                  {article.link && (
+                    <a className="underline" href={article.link}>
+                      Link
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
-    </ul>
+            </li>
+          ))}
+      </ul>
+    </>
   );
 }

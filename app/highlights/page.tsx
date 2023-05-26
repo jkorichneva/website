@@ -1,4 +1,5 @@
 import { BeakerIcon } from "@heroicons/react/24/outline";
+import SectionHeader from "@/components/SectionHeader/SectionHeader";
 
 const talks: Talk[] = [
   {
@@ -27,29 +28,32 @@ type Talk = {
 
 export default function Page() {
   return (
-    <ul className="min-w-full flex flex-col flex-grow">
-      {talks
-        .sort((a, b) => (a.year > b.year ? -1 : 0))
-        .map((talk) => (
-          <li key={talk.id} className="py-2 flex flex-row">
-            <b>{talk.year}</b>
-            <div className="ml-3">
-              {talk.description}
-              <div>
-                {talk.slides && (
-                  <a className="underline" href={talk.slides}>
-                    Slides
-                  </a>
-                )}
-                {talk.video && (
-                  <a className="underline" href={talk.video}>
-                    Video
-                  </a>
-                )}
+    <>
+      <SectionHeader title="Highlights" />
+      <ul className="min-w-full flex flex-col flex-grow">
+        {talks
+          .sort((a, b) => (a.year > b.year ? -1 : 0))
+          .map((talk) => (
+            <li key={talk.id} className="py-2 flex flex-row">
+              <b>{talk.year}</b>
+              <div className="ml-3">
+                {talk.description}
+                <div>
+                  {talk.slides && (
+                    <a className="underline" href={talk.slides}>
+                      Slides
+                    </a>
+                  )}
+                  {talk.video && (
+                    <a className="underline" href={talk.video}>
+                      Video
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
-    </ul>
+            </li>
+          ))}
+      </ul>
+    </>
   );
 }
