@@ -34,7 +34,7 @@ export default function Page() {
           <li key={talk.id} className="py-2 flex flex-row">
             <b>{talk.year}</b>
             <div className="ml-3">
-              - {talk.description}
+              {talk.description}
               <div>
                 {talk.slides && (
                   <a className="underline" href={talk.slides}>

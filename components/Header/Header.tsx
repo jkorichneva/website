@@ -4,9 +4,9 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "About me", href: "/website/", current: true },
-  { name: "Articles/Contributions", href: "/website/articles", current: false },
-  { name: "Highlights", href: "/website/highlights", current: false },
+  { name: "About me", href: "/", current: true },
+  { name: "Articles/Contributions", href: "/articles", current: false },
+  { name: "Highlights", href: "/highlights", current: false },
 ];
 
 declare global {
@@ -24,13 +24,12 @@ export default function Example() {
   if (typeof window !== "undefined") {
     current = window.location.pathname;
   }
-  const title = navigation.find((item) => item.href === current);
   return (
     <>
       <Disclosure as="nav" className="bg-brown">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 min-w-full">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
@@ -52,8 +51,8 @@ export default function Example() {
                           href={item.href}
                           className={classNames(
                             item.href === current
-                              ? "bg-grey text-white"
-                              : "text-white hover:bg-grey hover:text-white",
+                              ? "bg-black text-white"
+                              : "text-white hover:bg-black hover:text-white",
                             "rounded-md px-3 py-2 text-sm font-medium"
                           )}
                           aria-current={
@@ -81,8 +80,8 @@ export default function Example() {
                     href={item.href}
                     className={classNames(
                       item.href === current
-                        ? "bg-grey text-white"
-                        : "text-white hover:bg-grey hover:text-white",
+                        ? "bg-black text-white"
+                        : "text-white hover:bg-black hover:text-white",
                       "block rounded-md px-3 py-2 text-base font-medium"
                     )}
                     aria-current={item.href === current ? "page" : undefined}
@@ -95,13 +94,6 @@ export default function Example() {
           </>
         )}
       </Disclosure>
-      <header className="bg-beige">
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-            {title?.name}
-          </h1>
-        </div>
-      </header>
     </>
   );
 }
