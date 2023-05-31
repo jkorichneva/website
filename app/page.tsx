@@ -16,12 +16,9 @@ export default function Home() {
         />
         <div className="sm:ml-4">
           <p>
-            <b>Hey!</b> My name is Jana. I am a Senior Frontend developer based
-            in Tbilisi with more than six years of experience. I specialize in
+            <b>Hey!</b> My name is Jana. I am a Senior Frontend developer with more than six years of experience. I specialize in
             React ecosystem, but also have experience in backend and devops. I
-            love automating manual operations and enhancing Dev experience. My
-            great inspiration is to shape thoughts into articles, code, and also
-            to speak publicly.
+            love automating manual operations and enhancing Dev experience. I like to shape thoughts into articles and code.
           </p>
 
           <h2 className="font-bold py-2">Tech stack:</h2>
@@ -35,7 +32,7 @@ export default function Home() {
           <h2 className="font-bold py-2">Interests:</h2>
           <p>
             In my free time I like to solve problems on Leetcode and read news
-            about web technologies. Also I enjoy ice-skating and pole sport.
+            about web technologies. Also I enjoy ice-skating and drawing.
           </p>
           <h2 className="font-bold py-2">Languages: </h2>
           <ul>
