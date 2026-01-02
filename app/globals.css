@@ -3,20 +3,51 @@
 @tailwind utilities;
 
 :root {
-  --color-black: #27374D;
-  --color-grey: #526D82;
-  --color-brown: #9DB2BF;
-  --color-beige: #DDE6ED;
-  --background: var(--color-beige);
-  --text-color: var(--color-black);
+  /* ---------- Backgrounds ---------- */
+  --color-bg-main: #FAF8F5;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-muted: #F3EFEA;
+
+  /* ---------- Text ---------- */
+  --color-text-primary: #2E2A26;
+  --color-text-secondary: #6B645C;
+  --color-text-muted: #9A938A;
+
+  /* ---------- Accent ---------- */
+  --color-accent-primary: #C8A27A;
+  --color-accent-hover: #9E7B57;
+  --color-accent-soft: #E9D8C3;
+
+  /* ---------- Borders & Dividers ---------- */
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+
+  /* ---------- Status (optional) ---------- */
+  --color-success: #6FAF8F;
+  --color-warning: #E0B15A;
+  --color-error: #D9776C;
+
+  --background: var(--color-bg-main);
+  --color: var(--color-text-primary);
 }
 
-/*@media (prefers-color-scheme: dark) {*/
-/*  :root {*/
-/*    --background: var(--color-black);*/
-/*    --color: var(--color-beige);*/
-/*  }*/
-/*}*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-main: #0F0F10;
+    --color-bg-surface: #1A1A1C;
+    --color-bg-muted: #242426;
+
+    --color-text-primary: #F4F1EC;
+    --color-text-secondary: #B8B3AA;
+    --color-text-muted: #8A857C;
+
+    --color-accent-primary: #D2B48C;
+    --color-accent-hover: #B8966F;
+    --color-accent-soft: rgba(210, 180, 140, 0.2);
+
+    --color-border-subtle: rgba(255, 255, 255, 0.08);
+  }
+}
 
 body {
   color: var(--text-color);
@@ -25,3 +56,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/*
+Core Colors
+
+Background: #0F0F10
+
+Card background: #1A1A1C
+
+Primary text: #F4F1EC
+
+Secondary text: #B8B3AA
+
+Accent Colors
+
+Primary accent: #D2B48C (light tan)
+
+Muted accent: #8C7358
+ */

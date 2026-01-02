@@ -7,31 +7,31 @@ export default function Footer() {
         <ul className="flex self-end w-60 justify-between">
           <SocialIcon
             url="https://twitter.com/MoriaShmoria"
-            bgColor="#212A3E"
+            bgColor="#2E2A26"
             fgColor="white"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://instagram.com/jkoritschnewa"
-            bgColor="#212A3E"
+            bgColor="#2E2A26"
             fgColor="white"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://www.linkedin.com/in/iana-korichneva/"
-            bgColor="#212A3E"
+            bgColor="#2E2A26"
             fgColor="white"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://t.me/Jkorichneva"
-            bgColor="#212A3E"
+            bgColor="#2E2A26"
             fgColor="white"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://github.com/jkorichneva"
-            bgColor="#212A3E"
+            bgColor="#2E2A26"
             fgColor="white"
             style={{ height: 35, width: 35 }}
           />

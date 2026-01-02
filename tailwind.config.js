@@ -14,18 +14,26 @@ module.exports = {
       },
       colors: {
         beige: {
-          DEFAULT: "#F1F6F9",
+          DEFAULT: "#FAF8F5",
         },
         black: {
-          DEFAULT: "#212A3E",
+          DEFAULT: "#2E2A26",
         },
         grey: {
-          DEFAULT: "#9BA4B5",
+          DEFAULT: "#E9D8C3",
         },
         brown: {
-          DEFAULT: "#394867",
+          DEFAULT: "#C8A27A",
         },
       },
+      fontFamily: {
+        DEFAULT: 'Noto Sans',
+        pacifico: 'Pacifico',
+      },
+      fontSize: {
+        DEFAULT: '1.5rem',
+        h1: '4.5rem',
+      }
     },
   },
   plugins: [],
