@@ -1,13 +1,32 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import { Newsreader, DM_Sans, JetBrains_Mono } from "next/font/google";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import { site } from "@/app/content";
 
-const inter = Inter({ subsets: ["latin"] });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dmsans",
+  display: "swap",
+});
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Iana Korichneva",
-  description: "Personal website of ",
+  title: site.brand,
+  description: site.metaDescription,
 };
 
 export default function RootLayout({
@@ -16,20 +35,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-    <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-      <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
-          rel="stylesheet"/>
-      <title>Iana Korichneva</title>
-    </head>
-    <body className={inter.className}>
-    <Header/>
-    <main className="max-w-7xl px-4 sm:px-6 lg:px-8">{children}</main>
-    <Footer/>
-    </body>
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${dmSans.variable} ${jetbrains.variable}`}
+    >
+      <body>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
